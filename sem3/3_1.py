@@ -25,13 +25,14 @@ def chisla(a):
     list = [randint(1, 10) for i in range(a)]
     return list
 
+list1 = chisla(a)
+print(list1)
 
-print(chisla(a))
-
-def sumnechet(chisla()):
+def sumnechet(a, list1):
     summ = 0
-    for i in range(0, len(list), 2):
-        summ += list[i]
+    for i in range(0, a, 2):
+        summ += list1[i]
     return summ
 
-print(sumnechet(a))
+b = sumnechet(a, list1)
+print(b)

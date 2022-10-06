@@ -18,19 +18,28 @@
 
 from random import randint
 
+
 print("введите количество чисел")
 a = (int(input()))
-summ = 0
-list = [randint(1, 10) for i in range(a)]
+
+
+def chisla(a):
+    list = [randint(1, 10) for i in range(a)]
+    return list
+
+list = chisla(a)
 print(list)
 
-list1 = []
 
-
-for i in range(a - 1):
-    if i < a:
+def proizvpara(a, list):
+    list1 = []
+    for i in range(a - 1):
         a -= 1
-        list1.append(list[i] * list[a])
-    if i == a:
-        list1.append(list[i])
+        if i < a:
+            list1.append(list[i] * list[a])
+        if i == a:
+            list1.append(list[i])
+    return list1
+
+list1 = proizvpara(a, list)
 print(list1)
